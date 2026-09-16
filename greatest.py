@@ -1,15 +1,12 @@
-import sys
+num1 = float(input("Enter first number: "))
+num2 = float(input("Enter second number: "))
+num3 = float(input("Enter third number: "))
 
-# Check if arguments are provided from Jenkins, otherwise use defaults
-if len(sys.argv) >= 4:
-    num1 = float(sys.argv[1])
-    num2 = float(sys.argv[2])
-    num3 = float(sys.argv[3])
+if (num1 >= num2) and (num1 >= num3):
+    greatest = num1
+elif (num2 >= num1) and (num2 >= num3):
+    greatest = num2
 else:
-    num1, num2, num3 = 10.0, 25.0, 15.0
+    greatest = num3
 
-# Find the greatest number
-greatest = max(num1, num2, num3)
-
-print(f"The numbers are: {num1}, {num2}, {num3}")
 print(f"The greatest number is: {greatest}")
